@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio de Arte y Fotografía</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Portafolio</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#fotografia">Fotografía</a></li>
+                <li><a href="#arte">Arte</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Bienvenido a mi Mundo Creativo</h1>
+            <p>Explorando la belleza a través del lente y el pincel</p>
+            <a href="#fotografia" class="btn">Explorar Obras</a>
+        </div>
+    </section>
+
+    <!-- Sección de Fotografía -->
+    <section id="fotografia" class="section">
+        <div class="container">
+            <h2>Fotografía</h2>
+            <div class="carousel">
+                <div class="carousel-container" id="photoCarousel">
+                    <!-- Las imágenes se cargarán dinámicamente con JavaScript -->
+                </div>
+                <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+                <button class="carousel-button next" id="nextBtn">&#10095;</button>
+                <div class="carousel-indicators" id="carouselIndicators">
+                    <!-- Los indicadores se generarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Arte -->
+    <section id="arte" class="section bg-light">
+        <div class="container">
+            <h2>Obras de Arte</h2>
+            <div class="book-gallery" id="bookGallery">
+                <div class="book">
+                    <div class="page">
+                        <div class="page-content">
+                            <h3>Galería de Obras</h3>
+                            <p>Desliza para ver mis creaciones artísticas</p>
+                        </div>
+                    </div>
+                    <!-- Las páginas del libro se cargarán dinámicamente con JavaScript -->
+                </div>
+                <button class="book-button prev" id="bookPrev">‹</button>
+                <button class="book-button next" id="bookNext">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="img/profile.jpg" alt="Fotografía del artista" id="profileImage">
+                </div>
+                <div class="about-text">
+                    <h3>Hola, soy [Tu Nombre]</h3>
+                    <p>Artista y fotógrafo apasionado por capturar momentos únicos y crear obras que inspiren. Mi viaje en el mundo del arte comenzó hace más de 10 años, y desde entonces no he dejado de explorar nuevas técnicas y estilos.</p>
+                    <p>Mi trabajo se centra en [tus temas o estilos principales], buscando siempre transmitir emociones y contar historias a través de mis creaciones.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-500px"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2>Contáctame</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+                <div id="formSuccess" class="success-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> [Tu Nombre]. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/bookGallery.js"></script>
+</body>
+</html>
